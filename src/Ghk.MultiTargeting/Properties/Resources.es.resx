@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AutomaticSupport_AutomaticSupport" xml:space="preserve">
-    <value>Automatic support</value>
-  </data>
-  <data name="AutomaticSupport_CurrentlyDownloading" xml:space="preserve">
-    <value>The software is currently downloading the automatic support application. Once it is ready, it will automatically run the support application in order to analyze the installed software and fix any problems it might find.</value>
-  </data>
-  <data name="AutomaticSupport_RemainingTime" xml:space="preserve">
-    <value>Remaining time: {0}</value>
-  </data>
 </root>

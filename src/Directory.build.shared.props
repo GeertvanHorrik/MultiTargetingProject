@@ -6,7 +6,6 @@
   -->
 
   <ItemGroup>
-    <Compile Include="..\*.cs" />
     <Compile Remove="Platforms\**\*.cs;Resources\**\*.cs" />
     <Page Remove="Platforms\**\*.xaml" />
     <!-- This is here so that the conditionally included files below are all visible in VS -->

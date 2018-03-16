@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AutomaticSupport_AutomaticSupport" xml:space="preserve">
-    <value>Automatische ondersteuning</value>
-  </data>
-  <data name="AutomaticSupport_CurrentlyDownloading" xml:space="preserve">
-    <value>Momenteel is de software de automatische ondersteunings applicatie aan het downloaden. Zodra het downloaden klaar is zal de applicatie automatisch worden opgestart. Deze applicatie zal vervolgens het systeem controleren en eventuele problemen die het vindt oplossen.</value>
-  </data>
-  <data name="AutomaticSupport_RemainingTime" xml:space="preserve">
-    <value>Resterende tijd: {0}</value>
-  </data>
 </root>

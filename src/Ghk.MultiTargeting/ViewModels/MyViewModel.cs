@@ -5,7 +5,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 
-namespace Ghk.MultiTargeting
+namespace Ghk.MultiTargeting.ViewModels
 {
     using Catel.MVVM;
 

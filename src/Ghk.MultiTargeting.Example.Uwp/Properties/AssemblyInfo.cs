@@ -10,7 +10,7 @@ using System.Resources;
 
 // All other assembly info is defined in SolutionAssemblyInfo.cs
 
-[assembly: AssemblyTitle("Ghk.MultiTargeting.Example")]
-[assembly: AssemblyProduct("Ghk.MultiTargeting.Example")]
-[assembly: AssemblyDescription("Ghk.MultiTargeting.Example app")]
+[assembly: AssemblyTitle("Ghk.MultiTargeting.Example for UWP")]
+[assembly: AssemblyProduct("Ghk.MultiTargeting.Example for UWP")]
+[assembly: AssemblyDescription("Ghk.MultiTargeting.Example app for UWP")]
 [assembly: NeutralResourcesLanguage("en-US")]
