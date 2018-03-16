@@ -4,7 +4,7 @@
   -->
 
   <PropertyGroup>
-    <Description>Catel fody add-in that automatically generates Catel style properties and more!</Description>
+    <Description>Multi target project example targeting both WPF and UWP in a single project</Description>
     <PackageIconUrl>https://github.com/Catel/Assets/raw/master/packages/logo.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/GeertvanHorrik/Ghk.MultiTargeting</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/GeertvanHorrik/Ghk.MultiTargeting/blob/develop/LICENSE</PackageLicenseUrl>
