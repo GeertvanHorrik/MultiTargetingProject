@@ -1,0 +1,30 @@
+<Project>
+  <!-- This file applies to all projects automatically -->
+
+  <PropertyGroup>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageIconUrl>https://github.com/Catel/Assets/raw/master/packages/logo.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/GeertvanHorrik/Ghk.MultiTargeting</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/GeertvanHorrik/Ghk.MultiTargeting/blob/develop/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/GeertvanHorrik/Ghk.MultiTargeting</RepositoryUrl>
+    <PackageOutputPath>$(ProjectDir)..\..\output\$(ConfigurationName)\</PackageOutputPath>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- https://github.com/dotnet/sdk/issues/810 - the temporary project has the wrong file extension -->
+    <LanguageTargets>$(MSBuildToolsPath)\Microsoft.CSharp.targets</LanguageTargets>
+  </PropertyGroup>
+</Project>

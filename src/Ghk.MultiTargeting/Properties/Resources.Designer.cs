@@ -11,7 +11,7 @@
 namespace Ghk.MultiTargeting.Properties {
     using System;
     using Catel.Reflection;
-
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
