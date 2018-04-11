@@ -6,7 +6,6 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageId>Ghk.MultiTargeting</PackageId>
     <PackageVersion>1.0.0-alpha0001</PackageVersion>
-    <Authors>GeertvanHorrik</Authors>
     <Description>Multi targeting example library for XAML projects.</Description>
     <PackageTags>multitargeting;netstandard;uap;wpf;uwp</PackageTags>
   </PropertyGroup>
