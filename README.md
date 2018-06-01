@@ -4,6 +4,20 @@ This is an example repository on how to target .NET 4.6, .NET 4.7 and UAP 10.0 u
 
 This project has been written as an example for the [blog post about multi-targeting platforms with a single project](http://geertvanhorrik.com/2018/03/14/multi-targeting-net-4-6-net-4-7-uap-10-0-with-a-single-project/).
 
+# How to build this example
+
+1. Open powershell with the repository as working directory
+2. `.\build.ps1 -target package`
+
+# How does it work?
+
+The scripts are extremely generic. One only has to customize 2 files:
+
+1. `/build.cake`
+2. `/deployment/cake/variables.cake` (but really, your build server should be passing in these values)
+
+The cake magic happens in `/deployment/cake/tasks.cake`
+
 # Project differences compared to the original template
 
 Compared to the [original multi-targeting example](https://oren.codes/2017/01/04/multi-targeting-the-world-a-single-project-to-rule-them-all/), the following changes were made.
