@@ -60,14 +60,17 @@
 
   <!-- .NET 4.5 -->
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <EnableWpfProjectSetup>true</EnableWpfProjectSetup>
     <DefineConstants>$(DefineConstants);NET;NET45;NET450</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net451' ">
+    <EnableWpfProjectSetup>true</EnableWpfProjectSetup>
     <DefineConstants>$(DefineConstants);NET;NET45;NET451</DefineConstants>
   </PropertyGroup>
   
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <EnableWpfProjectSetup>true</EnableWpfProjectSetup>   
     <DefineConstants>$(DefineConstants);NET;NET45;NET452</DefineConstants>
   </PropertyGroup>
 
@@ -79,14 +82,17 @@
 
   <!-- .NET 4.6 -->
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <EnableWpfProjectSetup>true</EnableWpfProjectSetup>   
     <DefineConstants>$(DefineConstants);NET;NET46;NET460</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <EnableWpfProjectSetup>true</EnableWpfProjectSetup>   
     <DefineConstants>$(DefineConstants);NET;NET46;NET461</DefineConstants>
   </PropertyGroup>
   
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net462' ">
+    <EnableWpfProjectSetup>true</EnableWpfProjectSetup>   
     <DefineConstants>$(DefineConstants);NET;NET46;NET462</DefineConstants>
   </PropertyGroup>
 
@@ -98,6 +104,7 @@
 
   <!-- .NET 4.7 -->
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net47' ">
+    <EnableWpfProjectSetup>true</EnableWpfProjectSetup>   
     <DefineConstants>$(DefineConstants);NET;NET47;NET470</DefineConstants>
   </PropertyGroup>
   
@@ -109,6 +116,7 @@
   
   <!-- UAP 10.0 -->
   <PropertyGroup Condition=" '$(TargetFramework)' == 'uap10.0' ">
+    <EnableDefaultXamlItems>true</EnableDefaultXamlItems>
     <DefineConstants>$(DefineConstants);UAP;NETFX_CORE;UWP;WINDOWS_UWP</DefineConstants>
   </PropertyGroup>
   
