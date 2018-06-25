@@ -9,6 +9,10 @@ namespace Ghk.MultiTargeting.Example
 {
     using System.Windows;
 
+    /// <summary>
+    /// The main window.
+    /// </summary>
+    /// <seealso cref="System.Windows.Window" />
     public partial class MainWindow : Window
     {
         /// <summary>

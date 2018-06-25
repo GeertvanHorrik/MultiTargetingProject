@@ -1,9 +1,9 @@
 #l "generic-variables.cake"
 
-#addin "nuget:?package=MagicChunks"
-#addin "nuget:?package=Cake.FileHelpers"
-#addin "nuget:?package=Cake.Sonar"
-#tool "nuget:?package=MSBuild.SonarQube.Runner.Tool"
+#addin "nuget:?package=MagicChunks&version=2.0.0.119"
+#addin "nuget:?package=Cake.FileHelpers&version=3.0.0"
+#addin "nuget:?package=Cake.Sonar&version=1.1.0"
+#tool "nuget:?package=MSBuild.SonarQube.Runner.Tool&version=4.3.0"
 
 //-------------------------------------------------------------
 
@@ -133,26 +133,6 @@ Task("SonarBegin")
         Password = SonarPassword,
         Verbose = false,
         Key = SonarProject
-    });
-});
-
-//-------------------------------------------------------------
-
-Task("SonarEnd")
-    .IsDependentOn("Build")
-    .ContinueOnError()
-    .Does(() =>
-{
-    if (string.IsNullOrWhiteSpace(SonarUrl))
-    {
-        // No need to log, we already did
-        return;
-    }
-
-    SonarEnd(new SonarEndSettings 
-    {
-        Login = SonarUsername,
-        Password = SonarPassword,
     });
 });
 

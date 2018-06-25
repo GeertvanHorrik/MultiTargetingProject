@@ -1,9 +1,9 @@
 #l "apps-uwp-variables.cake"
 
-#addin nuget:?package=MagicChunks
+#addin nuget:?package=MagicChunks&version=2.0.0.119
 #addin nuget:?package=Newtonsoft.Json&version=11.0.2
 #addin nuget:?package=WindowsAzure.Storage&version=9.1.1
-#addin nuget:?package=Cake.WindowsAppStore
+#addin nuget:?package=Cake.WindowsAppStore&version=1.4.0
 
 //-------------------------------------------------------------
 
@@ -124,8 +124,8 @@ private void BuildUwpApps()
         Information("Building project for platform {0}, artifacts directory is '{1}'", platform.Key, artifactsDirectory);
 
         // Note: if csproj doesn't work, use SolutionFileName instead
-        //var projectFileName = string.Format("./src/{0}/{0}.csproj", uwpApp);
-        var projectFileName = SolutionFileName;
+        var projectFileName = string.Format("./src/{0}/{0}.csproj", uwpApp);
+        //var projectFileName = SolutionFileName;
         MSBuild(projectFileName, msBuildSettings);
 
         // Recalculate!

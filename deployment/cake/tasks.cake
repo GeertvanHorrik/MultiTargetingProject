@@ -31,6 +31,18 @@ Task("Build")
     BuildComponents();
     BuildUwpApps();
     BuildWpfApps();
+
+    if (string.IsNullOrWhiteSpace(SonarUrl))
+    {
+        // No need to log, we already did
+        return;
+    }
+
+    SonarEnd(new SonarEndSettings 
+    {
+        Login = SonarUsername,
+        Password = SonarPassword,
+    });
 });
 
 //-------------------------------------------------------------

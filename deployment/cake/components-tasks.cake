@@ -1,6 +1,6 @@
 #l "components-variables.cake"
 
-#addin "nuget:?package=Cake.FileHelpers"
+#addin "nuget:?package=Cake.FileHelpers&version=3.0.0"
 
 //-------------------------------------------------------------
 
