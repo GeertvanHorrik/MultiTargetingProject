@@ -4,6 +4,14 @@ This is an example repository on how to target .NET 4.6, .NET 4.7 and UAP 10.0 u
 
 This project has been written as an example for the [blog post about multi-targeting platforms with a single project](http://geertvanhorrik.com/2018/03/14/multi-targeting-net-4-6-net-4-7-uap-10-0-with-a-single-project/).
 
+Along the way, this example has been expanded with the following new [Cake](https://www.cakebuild.net/) build scripts:
+
+- Build multi-targeting class libraries (components)
+- Build WPF apps
+- Build UWP apps
+
+The scripts are set up in a way that allows a combination of these items as well (e.g. a WPF with an API library) can all be set up. For more information, see the [RepositoryTemplate repository](https://github.com/GeertvanHorrik/RepositoryTemplate).
+
 # How to build this example
 
 1. Open powershell with the repository as working directory
@@ -11,12 +19,76 @@ This project has been written as an example for the [blog post about multi-targe
 
 # How does it work?
 
-The scripts are extremely generic. One only has to customize 2 files:
+The scripts are extremely generic. One only has to customize 1 file:
 
-1. `/build.cake`
-2. `/deployment/cake/variables.cake` (but really, your build server should be passing in these values)
+* `/build.cake`
 
-The cake magic happens in `/deployment/cake/tasks.cake`
+Below is an example script to package a (multi-targeting) component, wpf and uwp app in a single solution:
+
+	// Define the required parameters
+	var DefaultSolutionName = "Ghk.MultiTargeting";
+	var DefaultCompany = "Geert van Horrik";
+	var DefaultRepositoryUrl = string.Format("https://github.com/{0}/{1}", DefaultCompany, DefaultSolutionName);
+	var StartYear = 2018;
+	
+	// Note: the rest of the variables should be coming from the build server,
+	// see `/deployment/cake/*-variables.cake` for customization options
+
+	//=======================================================
+	
+	// Components
+	
+	var ComponentsToBuild = new []
+	{
+	    "Ghk.MultiTargeting" 
+	};
+	
+	//=======================================================
+	
+	// WPF apps
+	
+	var WpfAppsToBuild = new []
+	{
+	    "Ghk.MultiTargeting.Example.Wpf"
+	};
+	
+	//=======================================================
+	
+	// UWP apps
+	
+	var UwpAppsToBuild = new []
+	{
+	    "Ghk.MultiTargeting.Example.Uwp"
+	};
+	
+	//=======================================================
+	
+	// Now all variables are defined, include the tasks, that
+	// script will take care of the rest of the magic
+	
+	#l "./deployment/cake/tasks.cake"
+
+And if you are not using a build server (seriously, you should be), you could choose to customize `/deployment/cake/*-variables.cake` as well.
+
+The Cake magic happens in the generic scripts in `/deployment/cake/*.cake`
+
+## How to use the scripts
+
+Below are a few example targets **using exactly the same scripts**:
+
+| Script | Description |
+|--------|-------------|
+| `./build.ps1 -Target BuildWpfApps` | Build all WPF apps in the solution |
+| `./build.ps1 -Target Package` | Build & package all components & (WPF & UWP) apps in the solution |
+| `./build.ps1 -Target PackageComponents` | Build & package all components in the solution |
+| `./build.ps1 -Target PackageUwpApps` | Build & package all UWP apps in the solution |
+
+As you can see, there is a pattern:
+
+* Build[SpecificTarget]
+* Package[SpecificTarget]
+
+*Note that [SpecificTarget] is optional*
 
 # Project differences compared to the original template
 
