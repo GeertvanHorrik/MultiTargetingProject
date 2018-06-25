@@ -139,7 +139,6 @@ Task("SonarBegin")
 //-------------------------------------------------------------
 
 Task("CodeSign")
-    .IsDependentOn("SonarEnd")
     .ContinueOnError()
     .Does(() =>
 {
