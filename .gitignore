@@ -121,9 +121,13 @@ Thumbs.db
 # Folder config file
 Desktop.ini
 
+# Tools
+/tools/
+
 # mstest test results
 TestResults
 .vs/
 .sonarqube/
 .github/
 BundleArtifacts/
+
