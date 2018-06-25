@@ -121,8 +121,9 @@ Thumbs.db
 # Folder config file
 Desktop.ini
 
-# Tools
-/tools/
+# Cake - Uncomment if you are using it
+tools/**
+!tools/packages.config
 
 # mstest test results
 TestResults
