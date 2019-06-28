@@ -19,6 +19,7 @@ TestResult.xml
 [Rr]elease/
 [Oo]utput*/
 [Pp]ackages*/
+[Tt]emp/
 bin
 obj
 [Ll]ib/*
@@ -124,6 +125,7 @@ Desktop.ini
 # Cake - Uncomment if you are using it
 tools/**
 !tools/packages.config
+build.cakeoverrides
 
 # mstest test results
 TestResults
@@ -132,3 +134,5 @@ TestResults
 .github/
 BundleArtifacts/
 
+.vscode
+FodyWeavers.xsd
