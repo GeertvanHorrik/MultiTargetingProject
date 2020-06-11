@@ -20,4 +20,3 @@
   <Import Project="$(MSBuildProjectDirectory)\..\..\Directory.Build.analyzers.props"
           Condition="$(RepositoryTemplateIgnoreBuildAnalyzersProps) != 'true' And Exists('$(MSBuildProjectDirectory)\..\..\Directory.Build.analyzers.props')" />
 </Project>
-
