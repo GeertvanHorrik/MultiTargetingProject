@@ -26,7 +26,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="Catel.Core" Version="5.12.18" PrivateAssets="all" />
+    <PackageReference Include="Catel.Core" Version="5.12.19" PrivateAssets="all" />
     <PackageReference Include="Catel.Fody" Version="4.7.0" PrivateAssets="all" />
     <PackageReference Include="Costura.Fody" Version="5.6.0" PrivateAssets="all" />
     <PackageReference Include="Fody" Version="6.5.3" PrivateAssets="all">
