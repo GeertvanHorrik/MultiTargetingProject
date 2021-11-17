@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Catel.Core">
-      <Version>5.12.20</Version>
+      <Version>5.12.22</Version>
     </PackageReference>
     <PackageReference Include="Catel.Fody">
       <Version>4.7.0</Version>
